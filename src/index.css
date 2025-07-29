@@ -1,0 +1,266 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+body {
+  font-family: "Poppins";
+  background-color: whitesmoke;
+}
+
+.heading-element {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  background-color: rgb(231, 231, 231);
+  padding: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border-radius: 30px;
+}
+.lightHeading {
+  box-shadow: 0px 10px 20px 2px rgb(218, 218, 218);
+}
+.input-todo-container {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  place-content: center;
+  place-items: center;
+  margin-top: 20px;
+}
+.input-todo-container input {
+  border: 2px lightgray solid;
+  padding: 14px;
+  max-width: 300px;
+  width: 350px;
+  border-radius: 12px;
+  margin-left: 120px;
+}
+.input-todo-container input:focus {
+  outline: none;
+  border: 2px rgb(103, 103, 103) solid;
+  transition: all 0.5s ease-in-out;
+  background-color: whitesmoke;
+}
+.add-todo-button button {
+  border: 1px rgb(232, 232, 232) solid;
+  padding: 13px;
+  width: 150px;
+  background-color: rgb(124, 124, 178);
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 13px;
+}
+.add-todo-button button:hover {
+  box-shadow: 1px 2px 10px 0px rgb(150, 150, 150);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+.add-todo-button button:active {
+  background-color: rgb(71, 71, 110);
+  transition: all 0.3 ease-in-out;
+}
+.display-todo-container {
+  display: grid;
+  grid-template-columns: repeat(6, 180px);
+  place-content: center;
+  place-items: center;
+  margin-top: 30px;
+  transition: all 0.5s ease-in-out;
+}
+.display-todo-container img {
+  width: 30px;
+}
+.delete-todo-button button {
+  border: none;
+  padding: 10px;
+  background-color: rgb(229, 108, 108);
+  width: 100px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 1px 1px 10px 1px lightgray;
+}
+.delete-todo-button button:hover {
+  background-color: rgb(228, 72, 72);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 1px rgb(188, 188, 188);
+}
+.show-mark input {
+  border: 2px black solid;
+  padding: 10px;
+  height: 40px;
+  width: 17px;
+}
+
+.yes {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.no {
+  text-decoration: none;
+}
+.show-mark input {
+  cursor: pointer;
+}
+.display-todo-container {
+  background-color: rgb(231, 231, 231);
+  padding: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 1px rgb(237, 237, 237);
+}
+.over-all-container {
+  overflow-y: scroll;
+  max-height: 400px;
+}
+::-webkit-scrollbar {
+  scrollbar-width: none;
+}
+.task-completed {
+  background-color: rgba(161, 161, 161, 0.524);
+}
+.move-todo-up button,
+.move-todo-down button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  background-color: none;
+}
+.err-msg {
+  text-align: center;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 16px;
+  color: red;
+  text-shadow: white;
+  letter-spacing: 2px;
+}
+.heading-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.darkMode .display-todo-container {
+  background-color: rgb(23, 23, 23);
+  color: white;
+  box-shadow: none;
+}
+.darkMode button {
+  box-shadow: none;
+  box-shadow: 1px 1px 10px rgb(44, 44, 44);
+  transition: all 0.5s ease-in-out;
+}
+.darkMode button:hover {
+  box-shadow: none;
+  transition: all 0.5s ease-in-out;
+}
+.darkHeading {
+  box-shadow: none;
+}
+.dark-mode-button button {
+  border: none;
+  padding: 12px;
+  width: 100px;
+  border-radius: 13px;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: rgb(195, 195, 195);
+}
+.darkAppplied button {
+  background-color: rgb(39, 39, 39);
+  color: white;
+  box-shadow: 1px 1px 10px 1px rgb(25, 25, 25);
+}
+
+.darkAppplied button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.darkMode .task-completed {
+  background-color: rgb(2, 2, 2);
+}
+@media (max-width: 950px) and (min-width: 700px) {
+  .input-todo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 340px);
+    place-content: center;
+    place-items: center;
+    margin-right: 100px;
+  }
+  .add-todo-button button {
+    margin-left: 460px;
+    margin-right: auto;
+    width: 680px;
+    margin-top: 20px;
+  }
+  .display-todo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    row-gap: 10px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+  }
+}
+@media (max-width: 700px) and (min-width: 300px) {
+  .input-todo-container {
+    display: grid;
+    grid-template-columns: repeat(1, 340px);
+    place-content: center;
+    place-items: center;
+    margin-right: 100px;
+  }
+  .input-todo-container input {
+    margin-top: 10px;
+    margin-right: 5px;
+  }
+  .add-todo-button button {
+    margin-left: 115px;
+    margin-right: auto;
+    width: 330px;
+    margin-top: 20px;
+  }
+  .display-todo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    row-gap: 20px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 310px;
+  }
+  body {
+    position: relative;
+    padding: 10px;
+  }
+  .dark-mode-button button {
+    position: absolute;
+    bottom: -70px;
+    right: 15px;
+  }
+  .heading-element {
+    margin-left: 22px;
+    margin-right: auto;
+    width: 300px;
+  }
+  .over-all-container{
+    max-height: 250px;
+  }
+ 
+}
